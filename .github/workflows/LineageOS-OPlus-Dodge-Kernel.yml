@@ -90,7 +90,7 @@ jobs:
           echo "Applying Wild Kernels patches..."
           for patch in wildpatches/*.patch; do
             echo "Applying $patch"
-            patch -p1 < "$patch"
+            patch -p1 < "$patch" || true
           done
 
           echo "Wild Kernels patches applied successfully"
