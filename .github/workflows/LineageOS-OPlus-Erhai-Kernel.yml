@@ -71,7 +71,7 @@ jobs:
         git clone --depth=1 -b gki-android15-6.6 https://gitlab.com/simonpunk/susfs4ksu.git
         echo "Copying patch files..."
         cp susfs4ksu/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch KernelSU-Next/
-        cp susfs4ksu/kernel_patches/50_add_susfs_in_kernel-*.patch 50_add_susfs_in_kernel.patch
+        cp susfs4ksu/kernel_patches/50_add_susfs_in_gki-android15-6.6.patch 50_add_susfs_in_kernel.patch
         echo "Copying SUSFS source files..."
         cp susfs4ksu/kernel_patches/fs/* fs/
         cp susfs4ksu/kernel_patches/include/linux/* include/linux/
