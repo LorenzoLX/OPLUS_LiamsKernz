@@ -86,7 +86,7 @@ jobs:
       run: |
           cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
           echo "Cloning wildpatches..."
-          git clone https://github.com/Liam31489/wildpatches
+          git clone https://github.com/Liam314839/wildpatches
           echo "Applying Wild Kernels patches..."
           for patch in wildpatches/*.patch; do
             echo "Applying $patch"
