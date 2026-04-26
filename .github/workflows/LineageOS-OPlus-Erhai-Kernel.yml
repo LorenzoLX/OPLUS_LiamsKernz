@@ -60,8 +60,8 @@ jobs:
     - name: Setup official KernelSU-Next
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/sm8750
-        curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s main
-        KSU_VERSION=$(cd KernelSU-Next && expr $(/usr/bin/git rev-list --count HEAD) + 20000)
+        curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash -s main
+        KSU_VERSION=$(cd KernelSU && expr $(/usr/bin/git rev-list --count HEAD) + 20000)
         echo "KSUVER=$KSU_VERSION" >> $GITHUB_ENV
 
     - name: Setup susfs4ksu
@@ -84,7 +84,7 @@ jobs:
 
     - name: Apply Wild Kernels patches
       run: |
-          cd $GITHUB_WORKSPACE/kernel_workspace/sm8750/KernelSU-Next
+          cd $GITHUB_WORKSPACE/kernel_workspace/sm8750/KernelSU
           echo "Cloning wildpatches..."
           git clone https://github.com/Liam314839/wildpatches
           echo "Applying Wild Kernels patches..."
